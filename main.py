@@ -1,3 +1,7 @@
+kurs_obj = []
+student_obj = []
+specs = []
+
 class Student:
     def __init__(self, name, surname, age):
         self.__name = name
@@ -109,18 +113,54 @@ def menu():
         choose = input("Выберите пункт меню: ")
 
         if choose == "1":
-            pass
+            kurs_obj = create_kurs()
+            print("Курс создан.")
+            input("Нажмите Enter, чтобы продолжить...")
+
         elif choose == "2":
-            pass
+            if kurs_obj != None:
+                spec_obj = create_spec()
+                kurs_obj.make_specs(spec_obj)
+                print("Специальность создана.")
+            else:
+                print("Сначала создайте курс.")
+            input("Нажмите Enter, чтобы продолжить...")
+
         elif choose == "3":
-            pass
+            if kurs_obj != None:
+                student_obj = create_student()
+                kurs_obj.make_student(student_obj)
+                print("Студент создан.")
+            else:
+                print("Сначала создайте курс.")
+            input("Нажмите Enter, чтобы продолжить...")
+
         elif choose == "4":
-            pass
+            if kurs_obj and kurs_obj.students:
+                for i, student in enumerate(kurs_obj.students, start=1):
+                    print(f"{i}. {student}")
+            else:
+                print("Нет студентов или курс не создан.")
+            input("Нажмите Enter, чтобы продолжить...")
+
         elif choose == "5":
-           pass
+            if kurs_obj and kurs_obj.specs:
+                for i, spec in enumerate(kurs_obj.specs, start=1):
+                    print(f"{i}. {spec}")
+            else:
+                print("Нет специальностей или курс не создан.")
+            input("Нажмите Enter, чтобы продолжить...")
+
         elif choose == "6":
-            pass
+            if kurs_obj:
+                print(kurs_obj)
+            else:
+                print("Курс не создан.")
+            input("Нажмите Enter, чтобы продолжить...")
+
         elif choose == "7":
-            pass
+            print("Выход из программы.")
+            break
+
         else:
-            pass
+            print("Некорректный выбор. Пожалуйста, выберите снова.")

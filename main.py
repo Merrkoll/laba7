@@ -2,6 +2,7 @@ kurs_obj = []
 student_obj = []
 specs = []
 
+
 class Student:
     def __init__(self, name, surname, age):
         self.__name = name
@@ -65,6 +66,7 @@ class Kurs:
         students_str = "\n".join(str(student) for student in self.students)
         return f"Курс: {self.namekurs}\n{spec_str}\nСтуденты:\n{students_str}"
 
+
 def create_kurs():
     namekurs = input("Введите номер курса: ")
     return Kurs(namekurs)
@@ -98,6 +100,8 @@ def create_student():
         except ValueError:
             print("Ошибка: Возраст должен быть числом. Попробуйте снова.")
     return Student(name, surname, age)
+
+
 def menu():
     kurs_obj = None
     while True:
@@ -164,3 +168,7 @@ def menu():
 
         else:
             print("Некорректный выбор. Пожалуйста, выберите снова.")
+
+
+if __name__ == "__main__":
+ menu()

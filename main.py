@@ -94,3 +94,33 @@ def create_student():
         except ValueError:
             print("Ошибка: Возраст должен быть числом. Попробуйте снова.")
     return Student(name, surname, age)
+def menu():
+    kurs_obj = None
+    while True:
+        print("Главное меню:")
+        print("1. Создать курс.")
+        print("2. Создать специальность(количество - неограничено).")
+        print("3. Создать студента.(количество - неограничено)")
+        print("4. Вывести информацию о студенте.")
+        print("5. Вывести информацию о специальности.")
+        print("6. Вывести информацию о курсе.")
+        print("7. Выход из программы ")
+
+        choose = input("Выберите пункт меню: ")
+
+        if choose == "1":
+            pass
+        elif choose == "2":
+            pass
+        elif choose == "3":
+            pass
+        elif choose == "4":
+            pass
+        elif choose == "5":
+           pass
+        elif choose == "6":
+            pass
+        elif choose == "7":
+            pass
+        else:
+            pass

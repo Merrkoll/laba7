@@ -61,3 +61,13 @@ class Kurs:
         students_str = "\n".join(str(student) for student in self.students)
         return f"Курс: {self.namekurs}\n{spec_str}\nСтуденты:\n{students_str}"
 
+def create_kurs():
+    return
+
+
+def create_spec():
+    return
+
+
+def create_student():
+    return

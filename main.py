@@ -15,3 +15,9 @@ class Spec:
 
     def __repr__(self):
         return
+
+    class Kurs:
+        def __init__(self):
+            return
+        def __str__(self):
+            return
